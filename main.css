@@ -1,0 +1,74 @@
+body {
+	margin: 0;
+}
+	
+.bg {
+	background-image: url(nebula.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -999;
+}
+
+.enlarger {
+	position: absolute;
+	width: 100%;
+  top: 10%;
+  font-size: 6em;
+  text-align: center;
+  line-height: 0.8em;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-shadow: 2px 4px 0px rgba(255,255,255,0.6); 
+  opacity: 0;
+  z-index: 999;
+	
+  -webkit-animation: enlarge 3s ease 0.3s;
+  				animation: enlarge 3s ease 0.3s;	
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+.swooper {
+	-webkit-animation: swoop 3s ease 0.3s;
+	        animation: swoop 3s ease 0.3s;
+}
+
+p {
+	position: absolute;
+	display: none;
+}
+
+
+
+@-webkit-keyframes enlarge {
+	0% { -webkit-transform: scale(0.1); opacity: 0; }
+	50% { opacity: 0.75; }
+	100% { -webkit-transform: scale(1); opacity: 1; }
+}
+
+@keyframes enlarge {
+	0% { -webkit-transform: scale(0.1); transform: scale(0.1); opacity: 0; }
+	50% { opacity: 0.75; }
+	100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+}
+
+@-webkit-keyframes swoop {
+	0% { top: 10%; }
+	50% { top: 11%; }
+	100% { top: 10%; }
+}
+
+@keyframes swoop {
+	0% { top: 10%; }
+	50% { top: 11%; }
+	100% { top: 10%; }
+}
+
+
+
+
+
+
