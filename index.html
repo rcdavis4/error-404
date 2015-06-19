@@ -1,28 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+
 	<meta charset="UTF-8">
 	<title>404 Error</title>
-	<link rel="stylesheet" href="main.css">
-	
+
+
 </head>
 
 
 <body>
+	
+	
+	<style>
+		body {
+			margin: 0;
+			font-family: sans-serif;
+		}
+
+		.bg {
+			background-image: url(nebula.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: top center;
+			height: 100vh;
+			overflow: hidden;
+			z-index: -999;
+		}
+
+		h1 {
+			position: absolute;
+			width: 100%;
+			top: 10%;
+			font-size: 8em;
+			text-align: center;
+			line-height: 0.8em;
+			letter-spacing: -0.01em;
+			color: #fff;
+			text-shadow: 2px 4px 0px rgba(255,255,255,0.6); 
+			text-decoration: underline;
+			opacity: 0;
+			z-index: 999;
+
+			-webkit-animation: enlarge 3s ease 0.3s;
+							animation: enlarge 3s ease 0.3s;	
+			-webkit-animation-fill-mode: forwards;
+							animation-fill-mode: forwards;
+		}
+
+		p {
+			position: absolute;
+			width: 100%;
+			top: 42%;
+			font-size: 2.6em;
+			text-align: center;
+			color: #fff;
+			opacity: 0;
+			z-index: 999;
+
+			-webkit-animation: show 0.5s ease 3.2s;
+							animation: show 0.5s ease 3.2s;	
+			-webkit-animation-fill-mode: forwards;
+							animation-fill-mode: forwards;
+		}
+
+		@-webkit-keyframes enlarge {
+			0% { -webkit-transform: scale(0.1); opacity: 0; }
+			50% { opacity: 0.75; }
+			100% { -webkit-transform: scale(1); opacity: 1; }
+		}
+
+		@keyframes enlarge {
+			0% { -webkit-transform: scale(0.1); transform: scale(0.1); opacity: 0; }
+			50% { opacity: 0.75; }
+			100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+		}
+
+		@-webkit-keyframes show {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+
+		@keyframes show {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+
+	</style>
+
+
+
 
 	<div class="bg"></div>
 	
-	<div class="swooper">
-		<h1 class="enlarger">Code 404</h1>
-	</div>
-	
-	<p>It seems you have spiralled out of orbit. Hold tight, we will send out a rescue pod shortly.</p>
+	<h1>Code 404</h1>	
+	<p>It seems you have spiralled out of orbit.<br>A rescue pod will arrive shortly.</p>
 
-	
 
-	<script src="jquery.min.js"></script>
-	<script src="app.js"></script>
 
 </body>
 
